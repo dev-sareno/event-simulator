@@ -29,7 +29,7 @@ dictConfig({
     'handlers': {
         'file': {
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/log/app.log',
+            'filename': os.getenv("HOME") + '/app.log',
             'maxBytes': 5242880,
             'backupCount': 3,
             'formatter': 'default'
